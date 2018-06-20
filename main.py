@@ -39,15 +39,22 @@ def createtree(frequencies):
 
 #get frequence
 freq = {}
-filename = int(input('please type in the file name/path.'))
+#filename = int(input('please type the file name/path'))
+filename = 'C://Users//10111//documents//GitHub//HuffmanCoding//raw'
 try:
-    with open(filename,'rb') as raw:
+    with open(filename,'r') as raw:
+        data = raw.read()
+        p = ''
+        for letter in data:
+            p += format(letter,'b')
+        l = len(p)
         for i in raw.read():
             try:
                 freq[i]+=1
             except:
                 freq[i] = 1
-except:print('unable to locate file')
+except:
+    print('unable to locate file.')
 freq = sorted(freq.items(), key=operator.itemgetter(0))
 #create new tree
 
