@@ -1,4 +1,6 @@
-binary_data = b'\x00\xFF\x00\xFF'
-import binascii
-base64_data = binascii.b2a_base64(binary_data)
-print(base64_data)
+print(int(bin(10)[2:]))
+bits = "01100010"
+newbits = int(bits[::-1], 2).to_bytes(int(len(bits)/8), 'little')
+with open('compressed','wb') as output:
+    output.write(newbits)
+    
