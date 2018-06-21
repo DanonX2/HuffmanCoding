@@ -43,11 +43,6 @@ freq = {}
 filename = 'C://Users//10111//documents//GitHub//HuffmanCoding//raw'
 try:
     with open(filename,'r') as raw:
-        data = raw.read()
-        p = ''
-        for letter in data:
-            p += format(letter,'b')
-        l = len(p)
         for i in raw.read():
             try:
                 freq[i]+=1

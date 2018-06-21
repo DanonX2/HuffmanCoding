@@ -18,7 +18,9 @@ def main():
         print(p)
 def main2():
     with open('C://Users//10111//documents//GitHub//HuffmanCoding//compressed.txt','rb') as compressed:
-        print(compressed.read())
+        c = compressed.read()
+        c.decode('utf-8')
+        print(c)
 
 if __name__ == '__main__':
     main2()
